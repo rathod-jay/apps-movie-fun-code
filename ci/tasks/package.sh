@@ -2,6 +2,8 @@
 
 set -e +x
 
+echo "Calling script"
+
 pushd apps-movie-fun-code
   echo "Packaging WAR"
   ./mvnw clean package -DskipTests
@@ -14,6 +16,7 @@ if [ $war_count -gt 1 ]; then
   exit 1
 fi
 
+echo "finding war"
 find apps-movie-fun-code/target -type f -name *.war -exec cp "{}" package-output/moviefun.war \;
 
 echo "Done packaging"

@@ -20,6 +20,7 @@ jobs:
   public: true
   plan:
   - get: apps-movie-fun-code
+    trigger: true
   - task: package
     file: apps-movie-fun-code/ci/tasks/package.yml
   - put: deploy-movie-fun
