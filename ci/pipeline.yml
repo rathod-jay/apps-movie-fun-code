@@ -19,10 +19,10 @@ jobs:
 - name: build
   public: true
   plan:
-  - get: movie-fun
+  - get: apps-movie-fun-code
   - task: package
-    file: movie-fun/ci/tasks/package.yml
+    file: apps-movie-fun-code/ci/tasks/package.yml
   - put: deploy-movie-fun
     params:
-      manifest: movie-fun/manifest.yml
+      manifest: apps-movie-fun-code/manifest.yml
       path: package-output/moviefun.war
