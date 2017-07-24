@@ -22,7 +22,7 @@ jobs:
   - get: apps-movie-fun-code
     trigger: true
   - task: package
-    file: apps-movie-fun-code/ci/tasks/package.yml
+    file: apps-movie-fun-code/ci/tasks/package1.yml
   - put: deploy-movie-fun
     params:
       manifest: apps-movie-fun-code/manifest.yml
