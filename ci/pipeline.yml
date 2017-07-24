@@ -1,5 +1,5 @@
 resources:
-- name: movie-fun
+- name: apps-movie-fun-code
   type: git
   source:
     uri: https://github.com/rathod-jay/apps-movie-fun-code
@@ -19,7 +19,7 @@ jobs:
 - name: build
   public: true
   plan:
-  - get: movie-fun
+  - get: apps-movie-fun-code
   - task: package
     file: apps-movie-fun-code/ci/tasks/package.yml
   - put: deploy-movie-fun
